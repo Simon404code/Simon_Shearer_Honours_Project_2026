@@ -1,0 +1,261 @@
+
+	Packages:
+library(Biostrings)
+library(Matrix)
+library(igraph)
+library(GENESPACE)
+library(devtools)
+
+genomeRepo <- "~/h_project/ref_gen/ncbi_dataset/ncbi_dataset/data/genomes"
+wd <- "~/h_project/ref_gen/wd0$"
+path2mcscanx <- "~/MCScanX/"
+
+
+	Firt run:
+genomeRepo <- "~/h_project/ref_gen/first_run/"
+wd <- "~/h_project/ref_gen/wd0/"
+path2mcscanx <- "~/h_project/ref_gen/wd0/MCScanX/"
+
+
+	Download genomes:
+urls <- c(
+  human ="000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_",
+  mouse = "000/001/635/GCF_000001635.27_GRCm39/GCF_000001635.27_GRCm39_",
+  platypus = "004/115/215/GCF_004115215.2_mOrnAna1.pri.v4/GCF_004115215.2_mOrnAna1.pri.v4_",
+  chicken = "016/699/485/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b_",
+  sandLizard = "009/819/535/GCF_009819535.1_rLacAgi1.pri/GCF_009819535.1_rLacAgi1.pri_")
+
+genomes2run <- names(urls)
+urls <- file.path("https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF", urls)
+translatedCDS <- sprintf("%stranslated_cds.faa.gz", urls)
+geneGff <- sprintf("%sgenomic.gff.gz", urls)
+
+names(translatedCDS) <- genomes2run
+names(geneGff) <- genomes2run
+writeDirs <- file.path(genomeRepo, genomes2run)
+names(writeDirs) <- genomes2run
+for(i in genomes2run){
+  print(i)
+  if(!dir.exists(writeDirs[i]))
+    dir.create(writeDirs[i])
+  download.file(
+    url = geneGff[i], 
+    destfile = file.path(writeDirs[i], basename(geneGff[i])))
+  download.file(
+    url = translatedCDS[i], 
+    destfile = file.path(writeDirs[i], basename(translatedCDS[i])))
+}
+
+
+	Loading the genomes:
+genomes2run <- c("human", "mouse", "platypus", "chicken", "sandLizard")
+parsedPaths <- parse_annotations(
+  rawGenomeRepo = genomeRepo,
+  genomeDirs = genomes2run,
+  genomeIDs = genomes2run,
+  presets = "ncbi",
+  genespaceWd = wd)
+
+
+	Run it, takes a while:
+gpar <- init_genespace(
+  wd = wd,
+  ploidy = 1, 
+  path2mcscanx = path2mcscanx)
+out <- run_genespace(gpar, overwrite = T)
+
+
+	Ref_genome run Hap1 vs Hap2:
+library(Biostrings)
+library(Matrix)
+library(igraph)
+library(GENESPACE)
+library(devtools)
+genomeRepo <- "~/h_project/ref_gen/ncbi_dataset/ref_run/"
+wd <- "~/h_project/ref_gen/ncbi_dataset/ref_run/wd1/"
+path2mcscanx <- "~/h_project/ref_gen/wd0/MCScanX/"
+
+
+genomes2run <- c("HAP1", "HAP2")
+parsedPaths <- parse_annotations(rawGenomeRepo=genomeRepo, genomeDirs=genomes2run, genomeIDs= genomes2run, presets = "phytozome", genespaceWd=wd)
+
+gpar <- init_genespace(
+  wd = wd,
+  path2mcscanx = path2mcscanx)
+
+out <- run_genespace(gpar, overwrite = T)
+
+ripd <- plot_riparian(
+  gsParam = out,
+  refGenome = "human", 
+  useRegions = FALSE)
+
+
+
+
+################333
+##############333333333
+DupyLicate:
+
+cd DupyliCate
+
+conda env create -f environment.yml
+
+conda activate dupylicate_v1.0
+
+python3 dupylicate.py 
+--gff <files_dir>
+ [--fasta <files_dir> | --cds <files_dir> | --pep <files_dir>]
+-- out <output_dir>
+*optional below*
+--ref <>
+--mode strict
+--seq_aligner
+-- options for days
+
+ python3 dupylicate.py --gff ~/h_project/duplicate_run/file_gff_clean/ --pep ~/h_project/duplicate_run/file_pep/ --out ~/h_project/dlicate_run/out/ 
+
+
+submitting scripts: (converts the end of line char from dos to unix style)
+sed -i 's/\r$//' <fileName>.pbs
+sbatch <fileName>.pbs
+
+£££££££££££££File
+#!/bin/bash
+#SBATCH --job-name=pre_processing
+#SBATCH --cpus-per-task=32 
+#SBATCH --mem=512gb
+#SBATCH --time=50:00:00
+#SBATCH --qos=general
+#SBATCH --output=/home/FCAM/sshearer/scripts_out/%x.out
+
+
+echo "Job completed successfully."
+£££££££££££££££££££££
+
+
+
+
+###################50 hpas genespace run, of lotter's paper###########
+screen -L 
+srun --partition=general --qos=general --mem=150G --pty bash
+conda activate genespace1
+
+R
+
+library(GENESPACE)
+library(BiocGenerics)
+library(IRanges)
+library(GenomeInfoDb)
+library(GenomicRanges)
+library(GenomeInfoDbData)
+library(rtracklayer)
+library(data.table)
+library(XVector)
+library(Biostrings)
+library(ggplot2)
+library(devtools)
+library(parallel)
+library(fpc)
+library(dbscan) 
+library(dplyr)
+
+
+genomeRepo <- "~/h_project/50_genespace_run/rss/"
+wd <- "~/h_project/50_genespace_run/work_dir/"
+wd <- "/scratch/genespace/"
+path2mcscanx <- "~/h_project/50_genespace_run/MCScanX/"
+source("~/h_project/GENESPACE/R/clean_windows.R")
+source("~/h_project/GENESPACE/R/riparian_windows.R")
+
+
+faFiles <- list.files(path = wd, recursive = T, pattern = ".fasta", full.names = TRUE)
+names(faFiles) <- gsub("Eucalyptus_grandis_var_|UP_FAM[0-9]+_|\\.mainGenome.fasta", "", basename(faFiles))
+
+
+wnd <- init_windows(wd = wd, nCores = 6, faFiles = faFiles, path2mcscanx = path2mcscanx)
+
+out <- clean_windows(wnd)
+
+bcf <- list.files(path = file.path(wd, "output"), pattern = "synBlkCoords", full.names = T)
+rip <- riparian_windows(faFiles = faFiles, blockCoordFiles = bcf)
+
+
+
+
+#######################Second attempt:
+
+screen -L 
+srun --partition=general --qos=general --mem=400G --pty bash
+conda activate genespace1
+
+
+in scratch directory where tmp is:
+
+mkdir -p /scratch/genespace/tmp
+chmod 700 /scratch/genespace/tmp
+
+export TMPDIR=/scratch/genespace/tmp
+export TMP=/scratch/genespace/tmp
+export TEMP=/scratch/genespace/tmp
+
+Rscript -e 'cat("TMPDIR=", Sys.getenv("TMPDIR"), "\n"); cat("tempdir=", tempdir(), "\n")'
+
+
+R
+
+library(GENESPACE)
+library(BiocGenerics)
+library(IRanges)
+library(GenomeInfoDb)
+library(GenomicRanges)
+library(GenomeInfoDbData)
+library(rtracklayer)
+library(data.table)
+library(XVector)
+library(Biostrings)
+library(ggplot2)
+library(devtools)
+library(parallel)
+library(fpc)
+library(dbscan) 
+library(dplyr)
+
+
+genomeRepo <- "~/h_project/50_genespace_run/rss/"
+wd <- "~/h_project/50_genespace_run/work_dir/"
+wd <- "/scratch/genespace/"
+path2mcscanx <- "~/h_project/50_genespace_run/MCScanX/"
+source("~/h_project/GENESPACE/R/clean_windows.R")
+source("~/h_project/GENESPACE/R/riparian_windows.R")
+
+
+faFiles <- list.files(path = "~/h_project/50_genespace_run/rss", recursive = T, pattern = ".fa$", full.names = TRUE)
+names(faFiles) <- gsub("Eucalyptus_grandis_var_|UP_FAM[0-9]+_|\\.mainGenome.fasta", "", basename(faFiles))
+print(names(faFiles))
+
+
+wnd <- init_windows(wd = wd, nCores = 5, faFiles = faFiles, path2mcscanx = path2mcscanx)
+
+out <- clean_windows(wnd)
+
+genomes2run <- faFiles
+parsedPaths <- parse_annotations(rawGenomeRepo=genomeRepo, genomeDirs=genomes2run, genomeIDs= genomes2run, presets = "phytozome", genespaceWd=wd)
+
+gpar <- init_genespace(
+  wd = wd,
+  path2mcscanx = path2mcscanx)
+
+output <- run_genespace(gpar, overwrite = T)
+
+
+bcf <- list.files(path = file.path(wd, "output"), pattern = "synBlkCoords", full.names = T)
+rip <- riparian_windows(faFiles = faFiles, blockCoordFiles = bcf)
+
+
+> genomeRepo <- "~/h_project/4_genome_run/rss/"
+> wd <- "~/h_project/4_genome_run/wd/"
+> path2mcscanx <- "~/h_project/50_genespace_run/MCScanX/"
+> genomes2run <- c("RM01HAP1", "RM01HAP2", "RM02HAP1", "RM02HAP2", "RM03HAP1", "RM03HAP2", "TAGHAP1", "TAGHAP2")
+>
+

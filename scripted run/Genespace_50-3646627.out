@@ -1,0 +1,179 @@
+mantis-019
+RK05HAP1: n unique sequences = 40029, n matched to gff = 40029
+RK05HAP2: n unique sequences = 39118, n matched to gff = 39118
+RK17HAP1: n unique sequences = 39846, n matched to gff = 39846
+RK17HAP2: n unique sequences = 38803, n matched to gff = 38803
+RK205HAP1: n unique sequences = 39516, n matched to gff = 39516
+RK205HAP2: n unique sequences = 39454, n matched to gff = 39454
+RK25HAP1: n unique sequences = 39948, n matched to gff = 39948
+RK25HAP2: n unique sequences = 39227, n matched to gff = 39227
+RK313HAP1: n unique sequences = 39053, n matched to gff = 39053
+RK313HAP2: n unique sequences = 38555, n matched to gff = 38555
+RK320HAP1: n unique sequences = 40158, n matched to gff = 40158
+RK320HAP2: n unique sequences = 39136, n matched to gff = 39136
+RK339HAP1: n unique sequences = 40272, n matched to gff = 40272
+RK339HAP2: n unique sequences = 39380, n matched to gff = 39380
+RK388HAP1: n unique sequences = 39963, n matched to gff = 39963
+RK388HAP2: n unique sequences = 39400, n matched to gff = 39400
+RK436HAP1: n unique sequences = 39541, n matched to gff = 39541
+RK436HAP2: n unique sequences = 39503, n matched to gff = 39503
+RK441HAP1: n unique sequences = 39612, n matched to gff = 39612
+RK441HAP2: n unique sequences = 39675, n matched to gff = 39675
+RK465HAP1: n unique sequences = 39666, n matched to gff = 39666
+RK465HAP2: n unique sequences = 39155, n matched to gff = 39155
+RK498HAP1: n unique sequences = 39974, n matched to gff = 39974
+RK498HAP2: n unique sequences = 39323, n matched to gff = 39323
+RK50HAP1: n unique sequences = 39750, n matched to gff = 39750
+RK50HAP2: n unique sequences = 39435, n matched to gff = 39435
+RK561HAP1: n unique sequences = 39370, n matched to gff = 39370
+RK561HAP2: n unique sequences = 39271, n matched to gff = 39271
+RK614HAP1: n unique sequences = 40154, n matched to gff = 40154
+RK614HAP2: n unique sequences = 39922, n matched to gff = 39922
+RK687HAP1: n unique sequences = 39882, n matched to gff = 39882
+RK687HAP2: n unique sequences = 39499, n matched to gff = 39499
+RK715HAP1: n unique sequences = 39685, n matched to gff = 39685
+RK715HAP2: n unique sequences = 39432, n matched to gff = 39432
+RK74HAP1: n unique sequences = 39843, n matched to gff = 39843
+RK74HAP2: n unique sequences = 39145, n matched to gff = 39145
+RK792HAP1: n unique sequences = 39850, n matched to gff = 39850
+RK792HAP2: n unique sequences = 39421, n matched to gff = 39421
+RK84HAP1: n unique sequences = 39667, n matched to gff = 39667
+RK84HAP2: n unique sequences = 39434, n matched to gff = 39434
+RK86HAP1: n unique sequences = 40010, n matched to gff = 40010
+RK86HAP2: n unique sequences = 39337, n matched to gff = 39337
+RM01HAP1: n unique sequences = 40173, n matched to gff = 40173
+RM01HAP2: n unique sequences = 39510, n matched to gff = 39510
+RM02HAP1: n unique sequences = 39915, n matched to gff = 39915
+RM02HAP2: n unique sequences = 39495, n matched to gff = 39495
+RM03HAP1: n unique sequences = 39668, n matched to gff = 39668
+RM03HAP2: n unique sequences = 38882, n matched to gff = 38882
+TAG0014HAP1: n unique sequences = 40292, n matched to gff = 40292
+TAG0014HAP2: n unique sequences = 39705, n matched to gff = 39705
+Checking Working Directory ... PASS: `/scratch/genespace2/wd`
+Checking user-defined parameters ...
+	Genome IDs & ploidy ... 
+		RK05HAP1   : 1
+		RK05HAP2   : 1
+		RK17HAP1   : 1
+		RK17HAP2   : 1
+		RK205HAP1  : 1
+		RK205HAP2  : 1
+		RK25HAP1   : 1
+		RK25HAP2   : 1
+		RK313HAP1  : 1
+		RK313HAP2  : 1
+		RK320HAP1  : 1
+		RK320HAP2  : 1
+		RK339HAP1  : 1
+		RK339HAP2  : 1
+		RK388HAP1  : 1
+		RK388HAP2  : 1
+		RK436HAP1  : 1
+		RK436HAP2  : 1
+		RK441HAP1  : 1
+		RK441HAP2  : 1
+		RK465HAP1  : 1
+		RK465HAP2  : 1
+		RK498HAP1  : 1
+		RK498HAP2  : 1
+		RK50HAP1   : 1
+		RK50HAP2   : 1
+		RK561HAP1  : 1
+		RK561HAP2  : 1
+		RK614HAP1  : 1
+		RK614HAP2  : 1
+		RK687HAP1  : 1
+		RK687HAP2  : 1
+		RK715HAP1  : 1
+		RK715HAP2  : 1
+		RK74HAP1   : 1
+		RK74HAP2   : 1
+		RK792HAP1  : 1
+		RK792HAP2  : 1
+		RK84HAP1   : 1
+		RK84HAP2   : 1
+		RK86HAP1   : 1
+		RK86HAP2   : 1
+		RM01HAP1   : 1
+		RM01HAP2   : 1
+		RM02HAP1   : 1
+		RM02HAP2   : 1
+		RM03HAP1   : 1
+		RM03HAP2   : 1
+		TAG0014HAP1: 1
+		TAG0014HAP2: 1
+	Outgroup ... NONE
+	n. parallel processes ... 16
+	collinear block size ... 5
+	collinear block search radius ... 25
+	n gaps in collinear block ... 5
+	synteny buffer size... 100
+	only orthogroups hits as anchors ... TRUE
+	n secondary hits ... 0
+Checking annotation files (.bed and peptide .fa):
+	RK05HAP1   : 40029 / 40029 geneIDs exactly match (PASS)
+	RK05HAP2   : 39118 / 39118 geneIDs exactly match (PASS)
+	RK17HAP1   : 39846 / 39846 geneIDs exactly match (PASS)
+	RK17HAP2   : 38803 / 38803 geneIDs exactly match (PASS)
+	RK205HAP1  : 39516 / 39516 geneIDs exactly match (PASS)
+	RK205HAP2  : 39454 / 39454 geneIDs exactly match (PASS)
+	RK25HAP1   : 39948 / 39948 geneIDs exactly match (PASS)
+	RK25HAP2   : 39227 / 39227 geneIDs exactly match (PASS)
+	RK313HAP1  : 39053 / 39053 geneIDs exactly match (PASS)
+	RK313HAP2  : 38555 / 38555 geneIDs exactly match (PASS)
+	RK320HAP1  : 40158 / 40158 geneIDs exactly match (PASS)
+	RK320HAP2  : 39136 / 39136 geneIDs exactly match (PASS)
+	RK339HAP1  : 40272 / 40272 geneIDs exactly match (PASS)
+	RK339HAP2  : 39380 / 39380 geneIDs exactly match (PASS)
+	RK388HAP1  : 39963 / 39963 geneIDs exactly match (PASS)
+	RK388HAP2  : 39400 / 39400 geneIDs exactly match (PASS)
+	RK436HAP1  : 39541 / 39541 geneIDs exactly match (PASS)
+	RK436HAP2  : 39503 / 39503 geneIDs exactly match (PASS)
+	RK441HAP1  : 39612 / 39612 geneIDs exactly match (PASS)
+	RK441HAP2  : 39675 / 39675 geneIDs exactly match (PASS)
+	RK465HAP1  : 39666 / 39666 geneIDs exactly match (PASS)
+	RK465HAP2  : 39155 / 39155 geneIDs exactly match (PASS)
+	RK498HAP1  : 39974 / 39974 geneIDs exactly match (PASS)
+	RK498HAP2  : 39323 / 39323 geneIDs exactly match (PASS)
+	RK50HAP1   : 39750 / 39750 geneIDs exactly match (PASS)
+	RK50HAP2   : 39435 / 39435 geneIDs exactly match (PASS)
+	RK561HAP1  : 39370 / 39370 geneIDs exactly match (PASS)
+	RK561HAP2  : 39271 / 39271 geneIDs exactly match (PASS)
+	RK614HAP1  : 40154 / 40154 geneIDs exactly match (PASS)
+	RK614HAP2  : 39922 / 39922 geneIDs exactly match (PASS)
+	RK687HAP1  : 39882 / 39882 geneIDs exactly match (PASS)
+	RK687HAP2  : 39499 / 39499 geneIDs exactly match (PASS)
+	RK715HAP1  : 39685 / 39685 geneIDs exactly match (PASS)
+	RK715HAP2  : 39432 / 39432 geneIDs exactly match (PASS)
+	RK74HAP1   : 39843 / 39843 geneIDs exactly match (PASS)
+	RK74HAP2   : 39145 / 39145 geneIDs exactly match (PASS)
+	RK792HAP1  : 39850 / 39850 geneIDs exactly match (PASS)
+	RK792HAP2  : 39421 / 39421 geneIDs exactly match (PASS)
+	RK84HAP1   : 39667 / 39667 geneIDs exactly match (PASS)
+	RK84HAP2   : 39434 / 39434 geneIDs exactly match (PASS)
+	RK86HAP1   : 40010 / 40010 geneIDs exactly match (PASS)
+	RK86HAP2   : 39337 / 39337 geneIDs exactly match (PASS)
+	RM01HAP1   : 40173 / 40173 geneIDs exactly match (PASS)
+	RM01HAP2   : 39510 / 39510 geneIDs exactly match (PASS)
+	RM02HAP1   : 39915 / 39915 geneIDs exactly match (PASS)
+	RM02HAP2   : 39495 / 39495 geneIDs exactly match (PASS)
+	RM03HAP1   : 39668 / 39668 geneIDs exactly match (PASS)
+	RM03HAP2   : 38882 / 38882 geneIDs exactly match (PASS)
+	TAG0014HAP1: 40292 / 40292 geneIDs exactly match (PASS)
+	TAG0014HAP2: 39705 / 39705 geneIDs exactly match (PASS)
+Checking dependencies ...
+	Found valid path to OrthoFinder v2.55: `orthofinder`
+	Found valid path to DIAMOND2 v2.25: `diamond`
+	Found valid MCScanX_h executable: `/home/FCAM/sshearer/h_project/50_genespace_run/MCScanX//MCScanX_h`
+
+############################
+1. Running orthofinder (or parsing existing results)
+	Checking for existing orthofinder results ...
+[1] TRUE
+        Copying files over to the temporary directory:
+                /scratch/genespace2/wd/tmp
+        Running the following command in the shell: `orthofinder -f
+                /scratch/genespace2/wd/tmp -t 16 -a 1 -X -o
+                /scratch/genespace2/wd/orthofinder`.This can take a
+                while. To check the progress, look in the
+                `WorkingDirectory` in the output (-o) directory

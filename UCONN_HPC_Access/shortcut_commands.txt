@@ -1,0 +1,21 @@
+	SSH in:
+ssh sshearer@login.hpc.cam.uchc.edu
+
+
+	Interactive session:
+srun --qos=general --mem=32gb --pty bash
+
+	Directory:
+cd h_project/
+	
+	Enviroment:
+conda activate genespace1
+
+	The Stellenbosch group working directory is located at:
+/core/labs/Wegrzyn/EucData/
+
+/pangenome_protein_assemblies: .protein.fa.gz
+/pangenome_assemblies: .fa | .fai
+/pangenome_annotations: .gene.gff3.gz
+
+

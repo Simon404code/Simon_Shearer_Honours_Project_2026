@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=Genespace_50
+#SBATCH --cpus-per-task=50
+#SBATCH --mem=200Gb
+#SBATCH --time=7-23:59:59
+#SBATCH --qos=general
+#SBATCH --output=%x-%j.out
+#SBATCH --error=myprog.err
+#SBATCH --mail-user=27210456@sun.ac.za
+#SBATCH --mail-type=BEGIN,END,FAIL
+
+hostname
+
+source /home/FCAM/sshearer/miniforge3/etc/profile.d/conda.sh
+conda activate genespace1
+
+Rscript genespace_run_50.R

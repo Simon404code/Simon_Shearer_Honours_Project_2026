@@ -1,0 +1,9 @@
+HOG_ID	genome	arrayID	genes_in_array	Location	Region	Subpopulation	chr	start
+N0.HOG0000539	RK687_HAP1	Arr1939749	21	Wedding Bells SF	Coffs Harbour	South	Chr05	42052305.0
+N0.HOG0000539	TAG0014_HAP1	Arr1947623	19	Kwambonambi	KwaZulu-Natal	Mondi Tree Improvement Research	Chr05	41449141.0
+N0.HOG0000539	RK388_HAP1	Arr1930806	15	Mapleton	Sunshine Coast	South	Chr05	35936903.0
+N0.HOG0000539	RK339_HAP1	Arr1929742	12	Mt. Tamborine	Mt Tamborine & Mt Lindsay	South	Chr05	40920636.0
+N0.HOG0000539	RK339_HAP2	Arr1930276	10	Mt. Tamborine	Mt Tamborine & Mt Lindsay	South	Chr05	37806518.0
+N0.HOG0000539	RK50_HAP1	Arr1936374	10	Tinaroo Creek Road	Atherton	North	Chr05	36675425.0
+N0.HOG0000539	RK50_HAP2	Arr1937014	4	Tinaroo Creek Road	Atherton	North	Chr05	36562108.0
+N0.HOG0000539	RK86_HAP2	Arr1944807	4	Bulahdelah SF	Bulahdelah	South	Chr05	36346118.0
